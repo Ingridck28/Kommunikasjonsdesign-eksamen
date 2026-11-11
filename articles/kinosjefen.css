@@ -331,15 +331,25 @@ body.lights-out main > *:not(.ending) { opacity: .15; transition: opacity 1.2s; 
   color: #1d1b17;
   max-width: 34rem;
   width: 100%;
+  max-height: min(92vh, 56rem);
   margin-block: auto;
   padding: 1.5rem;
   display: grid;
   gap: .8rem;
+  overflow-y: auto;
+}
+.lightbox-inner #lb-paper,
+.lightbox-inner #lb-title,
+.lightbox-inner #lb-text {
+  color: #1d1b17;
+}
+.lightbox-inner #lb-paper {
+  color: #5a5446;
 }
 .lightbox-inner img#lb-shot {
   display: block;
   width: 100%;
-  max-height: min(45vh, 22rem);
+  max-height: min(38vh, 18rem);
   height: auto;
   object-fit: contain;
   background: #d9d2c3;

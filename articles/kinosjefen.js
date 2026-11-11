@@ -97,7 +97,7 @@
       photo.id = 'lb-shot';
       photo.src = shot.src;
       photo.alt = shot.alt || '';
-      document.getElementById('lb-paper').before(photo);
+      document.getElementById('lb-text').after(photo);
     }
     lastFocus = b; lb.hidden = false; document.getElementById('lb-close').focus();
   }));
