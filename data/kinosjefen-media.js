@@ -16,7 +16,7 @@ const KINOSJEFEN_MEDIA = {
   clips: {
     teip: {
       src: "../images/kjeldsen-teip-munn.jpg",
-      alt: "Avisutklipp med overskriften «Munnkurv for Kjeldsen», der Olav Kjeldsen har teip over munnen. Fra boken Hele byens kino."
+      alt: "Avisutklipp med overskriften «Munnkurv for Kjeldsen», der Olav Kjeldsen har teip over munnen. Bilde tatt fra bladet Hele byens kino, lagd av Geir Løvli og Jørgen Søderberg Jansen. Dato 05.11.83."
     },
     che: {
       src: "../images/olav-che-tskjorte.jpg",
