@@ -315,8 +315,35 @@ body.lights-out main > *:not(.ending) { opacity: .15; transition: opacity 1.2s; 
 
 /* lightbox + toast */
 [hidden] { display: none !important; }
-.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.8); z-index: 20; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-left, 0px)); }
-.lightbox-inner { background: #e8e2d4; color: #1d1b17; max-width: 34rem; width: 100%; padding: 1.5rem; display: grid; gap: .8rem; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  z-index: 20;
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  overflow-y: auto;
+  padding: max(1rem, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-left, 0px)) max(1.5rem, env(safe-area-inset-bottom, 0px));
+}
+.lightbox-inner {
+  background: #e8e2d4;
+  color: #1d1b17;
+  max-width: 34rem;
+  width: 100%;
+  margin-block: auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: .8rem;
+}
+.lightbox-inner img#lb-shot {
+  display: block;
+  width: 100%;
+  max-height: min(45vh, 22rem);
+  height: auto;
+  object-fit: contain;
+  background: #d9d2c3;
+}
 .lightbox-inner .btn { color: #1d1b17; border-color: #8a8270; justify-self: start; }
 .toast { position: fixed; left: 50%; bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--fg); color: var(--bg); font-family: var(--mono); font-size: .8rem; padding: .6rem 1rem; z-index: 21; max-width: calc(100% - 32px); }
 

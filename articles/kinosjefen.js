@@ -80,7 +80,7 @@
   /* clippings */
   const clips = {
     teip: ['Bilde tatt fra bladet Hele byens kino, lagd av Geir Løvli og Jørgen Søderberg Jansen. Dato 05.11.83', 'Kinosjefen teipet igjen munnen', 'Kjeldsen fikk taleforbud i et politisk møte og møtte opp med gaffateip over munnen.'],
-    che: ['Fredriksstad Blad · 02.11.05', 'Kinosjef i Che Guevara-skjorte i Havana', 'Her vises det skannede utklippet. Bildet førte til at en lokalpolitiker ville ha Kjeldsen sparket. Forslaget fikk to stemmer.']
+    che: ['Fredriksstad Blad · 02.11.05', 'Kinosjef i Che Guevara-skjorte i Havana', 'Bildet førte til at en lokalpolitiker ville ha Kjeldsen sparket. Forslaget fikk to stemmer.']
   };
   const lb = document.getElementById('lightbox');
   let lastFocus;
@@ -97,7 +97,6 @@
       photo.id = 'lb-shot';
       photo.src = shot.src;
       photo.alt = shot.alt || '';
-      photo.style.width = '100%';
       document.getElementById('lb-paper').before(photo);
     }
     lastFocus = b; lb.hidden = false; document.getElementById('lb-close').focus();
