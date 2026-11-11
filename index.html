@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form &amp; Field — Historier, ideer og inspirasjon.</title>
+  <meta name="description" content="Form &amp; Field er et uavhengig magasin om kultur, livsstil, design og de stille ideene som finnes i hverdagen.">
+  <!-- Lets the mobile menu collapse. Without JavaScript the links stay visible. -->
+  <script>document.documentElement.classList.add("js");</script>
+  <!-- Inter is the only external file. Offline, the site uses a system sans-serif. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Form &amp; Field, home">
+        <span class="logo-name">Form <span class="logo-amp">&amp;</span> Field</span>
+        <span class="logo-tagline">Historier, ideer og inspirasjon.</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Point these at a new page if you add more stories later. -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#stories" aria-current="page">Historier</a></li>
+          <li><a href="articles/article-culture.html">Musikk og kultur</a></li>
+          <li><a href="articles/article-lifestyle.html">Teknologi</a></li>
+          <li><a href="articles/article-design.html">Kunst</a></li>
+          <li><a href="articles/article-inspiration.html">Fra Rambo til Cuba</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Utgave 01 — høsten 2026</p>
+          <h1 id="hero-title">Utenfor rammene</h1>
+          <p class="hero-intro">Et uavhengig magasin om kultur, musikk, kunst, design og menneskene bak historiene</p>
+          <a class="button" href="#stories">Utforsk utgaven <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <figure class="hero-figure">
+          <div class="media">
+            <img src="images/hero-field.png" alt="Et grønt kornåkerlandskap i lavt sollys, med lysstråler gjennom skyer. Bildet er generert i Grok." width="598" height="906">
+          </div>
+          <figcaption>Åker i kveldslys. Generert i Grok.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="kicker">Fra redaksjonen</p>
+          <h2 id="featured-title">En historie verdt å høre</h2>
+        </div>
+
+        <!-- The whole feature is one link, same as the cards below. -->
+        <a class="feature" href="articles/article-culture.html" aria-labelledby="feature-story-title">
+          <div class="media">
+            <img src="images/foto%20av%20Mads%20Theodor%20Parton%20trommis%20for%20Tjuvradd%20og%20Sloth.png" alt="Mads Theodor Parton med bandana og skjegg sitter bak trommene. Svart-hvitt." width="584" height="757">
+          </div>
+          <div class="feature-body">
+            <p class="kicker">Musikk og kultur</p>
+            <h3 id="feature-story-title">Halden Rock City</h3>
+            <p class="dek">Rockelivet lever videre i grensebyen.</p>
+            <span class="read-more">Les artikkelen <span class="arrow" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="stories" id="stories" aria-labelledby="stories-title">
+      <div class="container">
+        <div class="stories-heading">
+          <h2 id="stories-title">I denne utgaven</h2>
+          <p class="section-intro"><strong>Fire historier. Fire perspektiver. Én utgave.</strong><br>Her møter du rockehistorie, samtidskunst, teknologi og menneskene som setter sitt preg på kulturen.</p>
+        </div>
+
+        <!--
+          Each card is a single link, so the whole card is clickable.
+          The image alt is empty because the title already names the story.
+        -->
+        <div class="card-grid">
+          <a class="card" href="articles/article-culture.html" aria-labelledby="story-culture-title">
+            <div class="media">
+              <img src="images/Bilde%20fra%20Feelgood%20av%20Espen%20R%C3%B8dstrand%20%26%20Magne%20Stenbra%CC%8Aten.jpg" alt="To musikere med bass og gitar på Feelgood Halden. Foto: Espen Rødstrand og Magne Stenbråten." width="944" height="684">
+            </div>
+            <div class="card-body">
+              <p class="card-meta">
+                <span class="kicker">Musikk og kultur</span>
+                <span class="index" aria-hidden="true">01</span>
+              </p>
+              <h3 id="story-culture-title">Halden Rock City</h3>
+              <p>Halden har i flere tiår vært kjent som en av Norges viktigste rockebyer.</p>
+              <span class="read-more">Les artikkelen <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="card" href="articles/article-design.html" aria-labelledby="story-design-title">
+            <div class="media">
+              <img src="images/Malin.jpeg" alt="Malin Carita Lind, partner og grunnlegger av Cube8 Gallery, står ved et stort maleri." width="1536" height="2048">
+            </div>
+            <div class="card-body">
+              <p class="card-meta">
+                <span class="kicker">Kunst</span>
+                <span class="index" aria-hidden="true">02</span>
+              </p>
+              <h3 id="story-design-title">Fra kunstprosjekt til helårsgalleri</h3>
+              <p>Cube8 Gallery i Fredrikstad skulle opprinnelig arrangere fire utstillinger i året.</p>
+              <span class="read-more">Les artikkelen <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="card" href="articles/article-lifestyle.html" aria-labelledby="story-lifestyle-title">
+            <div class="media">
+              <img src="images/menneske-og-ai.jpg" alt="En menneskehånd og en robotarm jobber sammen over et bord med bilder og fargeprøver." width="1024" height="576">
+            </div>
+            <div class="card-body">
+              <p class="card-meta">
+                <span class="kicker">Teknologi</span>
+                <span class="index" aria-hidden="true">03</span>
+              </p>
+              <h3 id="story-lifestyle-title">AI endrer markedsføringen: Frykter tap av troverdighet</h3>
+              <p>Kunstig intelligens endrer markedsføringsbransjen i høyt tempo – og kan svekke bedrifters troverdighet.</p>
+              <span class="read-more">Les artikkelen <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="card" href="articles/article-inspiration.html" aria-labelledby="story-inspiration-title">
+            <div class="media">
+              <img src="images/olav-che-tskjorte.jpg" alt="Olav sitter på en benk ved sjøen i en hvit t-skjorte med portrett av Che Guevara." width="429" height="600">
+            </div>
+            <div class="card-body">
+              <p class="card-meta">
+                <span class="kicker">Fra Rambo til Cuba</span>
+                <span class="index" aria-hidden="true">04</span>
+              </p>
+              <h3 id="story-inspiration-title">Kinosjefen som heller ba om tilgivelse</h3>
+              <p>Han kunne nesten ingenting om film da han ble kinosjef i Fredrikstad i 1994.</p>
+              <span class="read-more">Les artikkelen <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="Form &amp; Field, home">
+          <span class="logo-name">Form <span class="logo-amp">&amp;</span> Field</span>
+        </a>
+        <p class="footer-text">Et nærmere blikk på kulturen, teknologien, menneskene og design</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#stories">Historier</a></li>
+          <li><a href="articles/article-culture.html">Musikk og kultur</a></li>
+          <li><a href="articles/article-lifestyle.html">Teknologi</a></li>
+          <li><a href="articles/article-design.html">Kunst</a></li>
+          <li><a href="articles/article-inspiration.html">Fra Rambo til Cuba</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year>2026</span> Form &amp; Field. Produsert av Stian Nielsen, Natasja Kaplon &amp; Ingrid Christine Karlsen.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kinosjefen som heller ba om tilgivelse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="kinosjefen.css">
+</head>
+<body>
+
+<canvas id="grain" aria-hidden="true"></canvas>
+<div id="progress" aria-hidden="true"></div>
+
+<main>
+  <!-- Åpningen med filmkorn -->
+  <header class="wrap" id="apning">
+    <div class="col hero">
+      <p class="back-link"><a href="../index.html#stories"><span aria-hidden="true">← </span>Tilbake</a></p>
+      <span class="reel">Olav Kjeldsen · fra 1994 - 2008</span>
+      <h1>Kinosjefen som heller ba om tilgivelse</h1>
+      <p class="ingress">Han kunne nesten ingenting om film da han ble kinosjef i Fredrikstad i 1994. Likevel nesten tredoblet Olav Kjeldsen besøket, slapp cowboyer ridende på hest inn i kinosalen og sendte fem containere med kinoutstyr til Cuba.</p>
+      <figure class="hero-photo">
+        <div class="frame" data-media="hero">[Bilde/video: Olav Kjeldsen i dag, gjerne i kinosalen]</div>
+        <p class="byline">Hentet fra Fredrikstad blad, 2007.</p>
+      </figure>
+      <div class="hero-quote">
+        <blockquote>«Det er lettere å få tilgivelse enn tillatelse.»</blockquote>
+        <button class="btn listen" data-audio="kredo">Hør Olav si det</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- REEL 1 -->
+  <section class="chapter wrap" id="liv">
+    <div class="col chapter-head">
+      <span class="reel">Spole 1 av 5</span>
+      <h2>Et liv på kino</h2>
+    </div>
+    <div class="col prose">
+      <p>Olav Kjeldsen har aldri vært redd for å lage bråk. En gang fikk han taleforbud i et politisk møte. Da fant han fram en bred teipbit, plastret den over munnen og havnet på forsiden av lokalavisen.</p>
+      <p class="quote">– Det kommunale systemet går så sent, og jeg er utålmodig. Jeg vil ha action. Det er derfor jeg ble kalt Rambo.</p>
+      <p>Under Kjeldsens ledelse ble Fredrikstad Kino kåret til Norges beste kino i stor klasse gang på gang, foran kinoene i Oslo, Bergen og Trondheim.</p>
+    </div>
+    <!-- Avisutklipp med lightbox -->
+    <div class="col clips" id="utklipp" aria-label="Avisutklipp">
+      <button class="clip" data-clip="teip">
+        <span class="paper">Fredriksstad Blad · 5.11.83</span>
+        <span class="headline">Kinosjefen teipet igjen munnen</span>
+        <span class="open">Trykk for å lese utklippet</span>
+      </button>
+      <button class="clip" data-clip="che">
+        <span class="paper">Fredriksstad Blad · 02.11.05</span>
+        <span class="headline">Kinosjef i Che Guevara-skjorte i Havana</span>
+        <span class="open">Trykk for å se utklippet</span>
+      </button>
+    </div>
+    <div class="col argus">
+      <div class="folders" aria-hidden="true">
+        <div class="folder big">Fredrikstad</div>
+        <div class="folder small">Norge</div>
+      </div>
+      <div class="prose">
+        <p>Film og Kino klippet ut alt avisene skrev om norske kinoer. Mappen merket «Fredrikstad» var langt tykkere enn mappen for resten av landet.</p>
+        <p class="note">Illustrasjon basert på Kjeldsens beskrivelse</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REEL 2 -->
+  <section class="chapter wrap" id="begynte">
+    <div class="col chapter-head">
+      <span class="reel">Spole 2 av 5</span>
+      <h2>Hvordan det begynte</h2>
+    </div>
+    <div class="col prose">
+      <p>Kinointeressen startet i Skien, der han vokste opp med Hopalong Cassidy og de gamle cowboyfilmene. Fra 1981 var Kjeldsen kulturkonsulent, med ansvar for tallene til bibliotek, museum og kino. Han så hvor dårlig det gikk med kinoen, og søkte jobben som kinosjef.</p>
+      <p class="quote">– Jeg kunne ikke noe om kino. Det jeg kunne, var markedsføring.</p>
+      <p>Filmene kom på 35-millimeters ruller, og de største kinoene fikk kopiene først. Fredrikstad lå på 17. plass i køen. Kjeldsen svarte med «Kinosjefens utvalgte» og med sprell som fikk hele byen til å snakke.</p>
+    </div>
+    <!-- Besøkskurven -->
+    <div class="wide chart-box" id="besok">
+      <span class="reel">Besøk per år</span>
+      <svg id="chart" viewBox="0 0 640 300" role="img" aria-label="Linjediagram over besøk ved Fredrikstad Kino: 126 525 i 1993, rundt 160 000 i 1994, 311 000 i 2003, 262 917 i 2019 og 166 027 i 2025."></svg>
+      <div class="steps" id="steps"></div>
+      <p class="annot" id="annot" aria-live="polite"></p>
+      <p class="note">Kilde: Dagsavisen, «Planlegger VIP-sal på kinoen», 06.01.2000. Avstanden mellom punktene er ikke tidsskalert.</p>
+    </div>
+  </section>
+
+  <!-- REEL 3 -->
+  <section class="chapter wrap" id="forandrer">
+    <div class="col chapter-head">
+      <span class="reel">Spole 3 av 5</span>
+      <h2>Kinoen forandrer seg</h2>
+    </div>
+    <div class="col prose">
+      <p>Resten av 90-tallet brettet Kjeldsen ut det han selv kaller galskapene sine. Bla deg gjennom noen av dem.</p>
+    </div>
+    <!-- Sprellgalleriet -->
+    <div class="wide gallery" id="sprell" tabindex="0" aria-label="Sprellene, bla sidelengs">
+      <article class="card">
+        <div class="card-body">
+          <span class="year">1990-tallet</span>
+          <h3>Cowboyduellen</h3>
+          <p>To karer fra Indre Østfold med ekte cowboyutstyr og hester holdt duell utenfor kinoen. Så red de rett inn i salen.</p>
+          <p class="card-quote">«Hestene dreit i midtgangen før de red ut igjen.»</p>
+          <button class="btn listen" data-audio="cowboy">Hør historien</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="year">1990-tallet</span>
+          <h3>James Bond-festivalen</h3>
+          <p>Pressen ble lokket til taket ved Blå Grotte med løfte om en verdenssensasjon. Kinosjefen stilte i smoking, med hvite tennissokker.</p>
+          <p class="card-quote">«Shaken, not stirred.»</p>
+          <button class="btn listen" data-audio="bond">Hør historien</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="year">1990-tallet</span>
+          <h3>Flintstones-bilen</h3>
+          <p>Brannvesenet bygde bilen, og byens barn fylte foajeen med steinalderting.</p>
+          <button class="btn listen" data-audio="flintstones">Hør historien</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <span class="year">Kinosjefens utvalgte</span>
+          <h3>Smale filmer, lange uker</h3>
+          <p>«La vita è bella» gikk i tre til fem uker i stedet for én. Etter hvert gikk de få kopiene til Oslo, Bergen og Fredrikstad.</p>
+          <p class="card-quote">«Og det irriterte hele landet.»</p>
+          <button class="btn listen" data-audio="utvalgte">Hør historien</button>
+        </div>
+      </article>
+    </div>
+
+    <!-- Revejakt-valget -->
+    <div class="col choice" id="revejakt">
+      <span class="reel">Revejaktteorien</span>
+      <p><strong>Du er tillitsvalgt for de ansatte.</strong> Kinosjefen vil ha dagkino og nattkino i alle tre salene, og legger fram tre forslag. Hvilket går du for?</p>
+      <div class="options">
+        <button class="option" data-opt="1" aria-pressed="false"><span class="n">1</span><span>Alt fortsetter som før.</span></button>
+        <button class="option" data-opt="2" aria-pressed="false"><span class="n">2</span><span>Et mellomforslag: dagkino og nattkino i alle saler, men mildere enn det neste.</span></button>
+        <button class="option" data-opt="3" aria-pressed="false"><span class="n">3</span><span>Et enda strengere opplegg.</span></button>
+      </div>
+      <div class="reveal" id="reveal" aria-live="polite">
+        <p class="note">Velg et forslag for å se hva klubben valgte.</p>
+      </div>
+    </div>
+
+    <div class="col prose">
+      <p>Med pengene kinoen tjente, kjøpte Kjeldsen digitalt lydanlegg til alle tre salene. Fra Danmark hentet han et system som gjorde lerretet større for widescreen-filmer.</p>
+    </div>
+    <!-- Lerret-demoen -->
+    <div class="wide screen-demo" id="lerret">
+      <span class="reel">Samme lerret, to måter å vise widescreen-film på</span>
+      <div class="stage" id="stage"><div class="picture" id="picture">Widescreen-film (1,85:1)</div></div>
+      <div class="toggle" role="group" aria-label="Velg maskering">
+        <button class="btn" data-mask="side" aria-pressed="true">Vanlig maskering</button>
+        <button class="btn" data-mask="flex" aria-pressed="false">Kjeldsens løsning</button>
+      </div>
+      <p class="annot" id="mask-text" aria-live="polite"></p>
+      <p class="note">Illustrasjon. Lerretet er tegnet i formatet 1,85:1; CinemaScope-filmer (2,39:1) vises med teppe oppe og nede.</p>
+    </div>
+
+    <div class="wide tech">
+      <div><span class="when">1994</span><p>35-millimeters ruller som skjøtes sammen for hånd. Filmen kan ryke eller begynne å brenne.</p></div>
+      <div><span class="when">1990-tallet</span><p>Digital lyd i alle tre salene, betalt med kinoens egne penger.</p></div>
+      <div><span class="when">2002</span><p>Den nye kinoen åpner etter studieturer til Danmark, Tyskland og England.</p></div>
+      <div><span class="when">Slutten av perioden</span><p>Filmene kommer på harddisk. «Alt ble skikkelig krystallklart.»</p></div>
+    </div>
+  </section>
+
+  <!-- REEL 4 -->
+  <section class="chapter wrap" id="konkurranse">
+    <div class="col chapter-head">
+      <span class="reel">Spole 4 av 5</span>
+      <h2>Kinoen møter konkurranse</h2>
+    </div>
+    <div class="col prose">
+      <p class="quote">– Film er best på kino. Med det store lerretet og digital lyd kommer jagerflyene bakfra. Det får du ikke hjemme, selv med hjemmekino.</p>
+      <p>Kjeldsen er mer bekymret for prisen. Ungdom har dårligere råd, og kiosken er dyr. Hva ville du betalt?</p>
+    </div>
+    <!-- Prisslideren -->
+    <div class="col price" id="pris">
+      <label class="reel" for="price">Billettpris</label>
+      <input type="range" id="price" min="60" max="180" step="5" value="150">
+      <div class="price-out">
+        <div><span class="big" id="p-one">150 kr</span><span class="lbl">Én billett</span></div>
+        <div><span class="big" id="p-four">600 kr</span><span class="lbl">Familie på fire</span></div>
+      </div>
+      <p class="annot" id="p-text" aria-live="polite"></p>
+      <p class="note">Priser fra intervjuet. Familiepris er bare billett ganger fire, uten kiosk.</p>
+    </div>
+    <div class="col prose">
+      <p>Pandemien, streik i Hollywood og flere år med det Kjeldsen kaller filmtørke har tatt hardt på kinoen. Ifølge ham har 11–13 ansatte fått sluttpakke.</p>
+      <p class="quote">– Det er trist, særlig for de eldre.</p>
+    </div>
+  </section>
+
+  <!-- CUBA -->
+  <section class="chapter wrap cuba" id="cuba">
+    <div class="col chapter-head">
+      <span class="reel">Mellomspill</span>
+      <h2>Da gamle kinomaskiner fikk et nytt liv på Cuba</h2>
+    </div>
+    <div class="col prose">
+      <p>I desember 2000 reiste Kjeldsen for første gang til filmfestivalen i Havana. Der møtte han regissøren Humberto Solás, som senere fikk en demonstrasjon av surroundlyden i Blå Grotte.</p>
+      <p class="quote">– De var helt i himmelfallen.</p>
+      <p>Da den nye kinoen åpnet, ble stoler, lerreter og lydanlegg fra den gamle til overs. Kjeldsen sendte dem over Atlanteren.</p>
+    </div>
+    <!-- Cuba-kartet -->
+    <div class="wide map" id="cuba-kart">
+      <svg id="map" viewBox="0 0 640 320" role="img" aria-label="Skjematisk kart: fem containere reiser fra Fredrikstad til Havana."></svg>
+      <div class="toggle"><button class="btn" id="ship">Send containerne</button></div>
+      <p class="note">Skjematisk kart, ikke målestokkriktig.</p>
+    </div>
+    <div class="wide facts">
+      <div><span class="big">5</span><span class="lbl">containere med kinoutstyr</span></div>
+      <div><span class="big">250 000</span><span class="lbl">kroner fra UDs kulturavdeling</span></div>
+      <div><span class="big">2000</span><span class="lbl">publikummere på Chaplin-kinoen</span></div>
+      <div><span class="big">«Elling»</span><span class="lbl">var åpningsfilmen</span></div>
+    </div>
+    <div class="col prose">
+      <p class="quote">– Folk gikk helt bananas. Det var karneval.</p>
+      <figure>
+        <div class="frame" data-media="havana">[Bilde: Kjeldsen i Havana]</div>
+        <figcaption class="note">Kinosjef Olav Kjeldsen (f.v) og kultursjef i Fredrikstad Egil Syversen sammen med president i det cubanske filminstituttet, Omar Gonzalez. De er på Cuba, og gammelt, digitalt kinoteknisk utstyr fra kinoene i Blå Grotte og Speilet i Fredrikstad er her installert ved fire kinoer i Cuba. Foto: Trond Thorvaldsen, 06.07.2003. Hentet fra Fredrikstad blad.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- REEL 5 -->
+  <section class="chapter wrap" id="igjen">
+    <div class="col chapter-head">
+      <span class="reel">Spole 5 av 5</span>
+      <h2>Hva blir igjen?</h2>
+    </div>
+    <div class="col prose">
+      <p>Når politikerne holder festtaler, nevnes Fredrikstad Kino side om side med FFK. Til den nye kinosjefen har han bare én oppfordring.</p>
+      <p class="quote">– Skal du gjøre noe, må det være ut fra det du føler for og det du har tro på.</p>
+      <p>Kjeldsen la seg ut med mange underveis. Han sier selv at han var for ubyråkratisk for noen, og at han neppe var den mest populære mannen i Fredrikstad kommune. Men han trodde på det han drev med. Selv ser han tilbake med glede, ikke med bitterhet.</p>
+    </div>
+  </section>
+
+  <!-- Avslutningen -->
+  <footer class="ending wrap" id="avslutning">
+    <blockquote>«Jeg synes det er moro å glede folk. Jeg kan forlate denne verden med god samvittighet. Jeg har etterlatt et spor.»</blockquote>
+    <button class="btn" id="lights" aria-pressed="false">Slukk lyset i salen</button>
+    <p class="back-link"><a href="../index.html#stories"><span aria-hidden="true">← </span>Tilbake</a></p>
+  </footer>
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-inner" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+    <span class="note" id="lb-paper" style="color:#5a5446"></span>
+    <strong id="lb-title" style="font-size:1.3rem;line-height:1.2"></strong>
+    <p id="lb-text"></p>
+    <button class="btn" id="lb-close">Lukk</button>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="../data/besokstall.js"></script>
+<script src="../data/kinosjefen-media.js"></script>
+<script src="kinosjefen.js"></script>
+</body>
+</html>

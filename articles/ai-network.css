@@ -1,0 +1,410 @@
+/*
+  AI article only — digital network hero and soft tech accents.
+  Loaded only by article-lifestyle.html.
+*/
+
+.page-ai {
+  --ai-navy: #081426;
+  --ai-blue: #6b9eff;
+  --ai-purple: #9b7ae8;
+  --ai-teal: #4ecdc4;
+  --ai-ink: #e8eef8;
+  --ai-muted: #a8b4c8;
+  --ai-line: rgba(107, 158, 255, 0.22);
+  --ai-accent: #6b7fd7;
+}
+
+.page-ai .site-header {
+  background: var(--ai-navy);
+  border-top-color: var(--ai-teal);
+  border-bottom-color: rgba(232, 238, 248, 0.1);
+  color: var(--ai-ink);
+}
+
+.page-ai .site-header .logo-name {
+  color: var(--ai-ink);
+}
+
+.page-ai .site-header .logo-amp {
+  color: var(--ai-teal);
+}
+
+.page-ai .site-header .logo-tagline {
+  color: var(--ai-muted);
+}
+
+.page-ai .site-nav a {
+  color: var(--ai-ink);
+}
+
+.page-ai .site-nav a::after {
+  background: var(--ai-teal);
+}
+
+.page-ai .nav-toggle-bar,
+.page-ai .nav-toggle-bar::before,
+.page-ai .nav-toggle-bar::after {
+  background: var(--ai-ink);
+}
+
+@media (max-width: 860px) {
+  .page-ai .js .site-nav.is-open {
+    background: var(--ai-navy);
+    border-bottom-color: rgba(232, 238, 248, 0.12);
+  }
+
+  .page-ai .js .site-nav.is-open a {
+    color: var(--ai-ink);
+    border-bottom-color: rgba(232, 238, 248, 0.12);
+  }
+}
+
+.page-ai .article-wrap {
+  padding-top: 0;
+  background: var(--bg);
+}
+
+/* ---------- Dark network hero ---------- */
+
+.page-ai .ai-hero {
+  position: relative;
+  isolation: isolate;
+  background: var(--ai-navy);
+  color: var(--ai-ink);
+  padding: clamp(1.75rem, 4vw, 2.75rem) 0 clamp(2.5rem, 6vw, 4rem);
+  overflow: hidden;
+}
+
+.page-ai .ai-network {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.page-ai .ai-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-ai .ai-hero .back-link a {
+  color: var(--ai-muted);
+}
+
+.page-ai .ai-hero .back-link a:hover,
+.page-ai .ai-hero .back-link a:focus-visible {
+  color: var(--ai-ink);
+  text-decoration-color: var(--ai-teal);
+}
+
+.page-ai .ai-hero .article-header {
+  position: relative;
+  color: var(--ai-ink);
+  max-width: 40rem;
+}
+
+.page-ai .ai-hero .article-header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -1.25rem -1.5rem -1rem;
+  background: radial-gradient(
+    ellipse 85% 70% at 30% 40%,
+    rgba(8, 20, 38, 0.82) 0%,
+    rgba(8, 20, 38, 0.35) 55%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.page-ai .ai-hero .kicker {
+  color: var(--ai-teal);
+}
+
+.page-ai .ai-hero .article-header h1 {
+  color: #ffffff;
+  text-shadow: 0 1px 24px rgba(8, 20, 38, 0.55);
+}
+
+.page-ai .ai-hero .dek {
+  color: var(--ai-muted);
+  max-width: 36rem;
+}
+
+.page-ai .ai-hero .article-photo {
+  position: relative;
+  margin: 0 auto;
+  max-width: 52rem;
+}
+
+.page-ai .ai-hero .article-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px rgba(107, 158, 255, 0.18),
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 80px rgba(155, 122, 232, 0.12);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+}
+
+.page-ai .ai-hero .article-photo figcaption {
+  color: var(--ai-muted);
+  margin-top: 0.85rem;
+}
+
+/* Soft fade from navy into the light magazine page */
+.page-ai .ai-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3.5rem;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+}
+
+/* ---------- Light article body ---------- */
+
+.page-ai .ai-light {
+  position: relative;
+  z-index: 1;
+  background: var(--bg);
+  padding-top: clamp(0.5rem, 2vw, 1.25rem);
+}
+
+.page-ai .article-body h2 {
+  color: var(--text);
+  border-image: none;
+}
+
+.page-ai .article-body h2::after {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 2px;
+  margin: 0.65rem 0 0.15rem;
+  background: linear-gradient(90deg, var(--ai-blue), var(--ai-purple));
+  border-radius: 1px;
+}
+
+.page-ai .pull-quote {
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(180deg, var(--ai-blue), var(--ai-purple)) 1;
+  padding-left: 1.15rem;
+}
+
+.page-ai .pull-quote p {
+  color: var(--text);
+}
+
+/* ---------- Featured interview quotes ---------- */
+
+.page-ai .ai-quote {
+  position: relative;
+  max-width: 38rem;
+  margin: clamp(2.25rem, 5vw, 3.25rem) auto;
+  padding: clamp(1.75rem, 4vw, 2.35rem) clamp(1.25rem, 3.5vw, 2rem) clamp(1.5rem, 3.5vw, 2rem) clamp(1.5rem, 3.8vw, 2.1rem);
+  border: 0;
+  background:
+    radial-gradient(ellipse 90% 80% at 12% 20%, rgba(107, 158, 255, 0.1) 0%, transparent 58%),
+    radial-gradient(ellipse 70% 70% at 88% 85%, rgba(155, 122, 232, 0.08) 0%, transparent 55%);
+  overflow: hidden;
+}
+
+.page-ai .ai-quote::after {
+  content: "";
+  position: absolute;
+  top: 0.85rem;
+  bottom: 0.85rem;
+  left: 0;
+  width: 2px;
+  border-radius: 1px;
+  background: linear-gradient(180deg, var(--ai-blue), var(--ai-purple));
+  pointer-events: none;
+}
+
+.page-ai .ai-quote::before {
+  content: "«";
+  position: absolute;
+  top: 0.15rem;
+  left: 0.95rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.5rem, 10vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ai-purple);
+  opacity: 0.18;
+  pointer-events: none;
+  user-select: none;
+}
+
+.page-ai .ai-quote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.page-ai .ai-quote blockquote p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.page-ai .ai-quote figcaption {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(107, 126, 215, 0.22);
+}
+
+.page-ai .ai-quote-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.page-ai .ai-quote-role {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ai-accent);
+}
+
+@media (max-width: 700px) {
+  .page-ai .ai-quote {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1.15rem;
+    padding-right: 1.1rem;
+  }
+
+  .page-ai .ai-quote::before {
+    left: 0.55rem;
+    top: 0;
+  }
+}
+
+.page-ai ::selection {
+  background: rgba(107, 158, 255, 0.28);
+  color: var(--text);
+}
+
+/* ---------- Reflect module accents ---------- */
+
+.page-ai .ai-reflect {
+  border-top-color: rgba(107, 126, 215, 0.28);
+}
+
+.page-ai .ai-reflect h2::after {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 2px;
+  margin: 0.7rem auto 0.15rem;
+  background: linear-gradient(90deg, var(--ai-blue), var(--ai-purple));
+  border-radius: 1px;
+}
+
+.page-ai .ai-reflect-progress {
+  color: var(--ai-accent);
+}
+
+.page-ai .ai-reflect-option:hover,
+.page-ai .ai-reflect-retry:hover {
+  background: rgba(107, 158, 255, 0.08);
+  border-color: rgba(107, 158, 255, 0.35);
+}
+
+.page-ai .ai-reflect-option[aria-pressed="true"] {
+  border-color: var(--ai-accent);
+  background: rgba(155, 122, 232, 0.1);
+}
+
+.page-ai .ai-reflect-option:focus-visible,
+.page-ai .ai-reflect-retry:focus-visible {
+  outline: 2px solid var(--ai-blue);
+  outline-offset: 3px;
+}
+
+.page-ai .ai-reflect-retry {
+  border-color: var(--ai-accent);
+  background: rgba(107, 158, 255, 0.1);
+}
+
+.page-ai .ai-reflect-summary {
+  color: var(--text);
+}
+
+/* ---------- Network node pulse ---------- */
+
+.page-ai .ai-network .ai-node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ai-node-pulse 7.5s ease-in-out infinite;
+}
+
+.page-ai .ai-network .ai-node-pulse:nth-child(odd) {
+  animation-delay: -2.4s;
+  animation-duration: 9s;
+}
+
+.page-ai .ai-network .ai-node-pulse:nth-child(3n) {
+  animation-delay: -4.8s;
+  animation-duration: 11s;
+}
+
+@keyframes ai-node-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@media (max-width: 700px) {
+  .page-ai .ai-hero {
+    padding-bottom: 2.75rem;
+  }
+
+  .page-ai .ai-network {
+    opacity: 0.7;
+  }
+
+  .page-ai .ai-hero .article-header h1 {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+
+  .page-ai .article-body h2::after {
+    width: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-ai .ai-network .ai-node-pulse {
+    animation: none;
+    opacity: 0.75;
+    transform: none;
+  }
+}

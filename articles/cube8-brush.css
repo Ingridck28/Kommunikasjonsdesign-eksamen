@@ -1,0 +1,267 @@
+/*
+  Cube8 Gallery only.
+  Soft brush accents under the title and section headings.
+  Loaded only by article-design.html.
+*/
+
+.page-art {
+  --brush-red: #b85a48;
+  --brush-orange: #d4783c;
+  --brush-ink: #2c2a28;
+  --brush-mark: url("../images/brush-stroke-red.svg");
+}
+
+/* Trade hairline rules for painted marks on article headings. */
+.page-art .article-rules .article-header h1,
+.page-art.article-rules .article-header h1,
+.page-art .article-rules .article-body h2,
+.page-art.article-rules .article-body h2,
+.page-art .article-rules .venue-map h2,
+.page-art.article-rules .venue-map h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.page-art .article-header h1 {
+  margin-bottom: 0.2rem;
+}
+
+.page-art .brush-stroke {
+  display: block;
+  width: min(19rem, 78%);
+  height: auto;
+  margin: 0.2rem auto 0.85rem;
+  color: var(--brush-red);
+  pointer-events: none;
+  user-select: none;
+}
+
+.page-art .brush-stroke--hero {
+  width: min(22rem, 88%);
+  margin-top: 0.35rem;
+  margin-bottom: 0.15rem;
+  color: var(--brush-orange);
+  opacity: 0.9;
+  transform: rotate(-0.6deg);
+}
+
+.page-art .brush-stroke--section {
+  width: min(9.5rem, 46%);
+  margin: 0.15rem 0 1rem;
+  color: var(--brush-red);
+  opacity: 0.82;
+  transform: rotate(0.8deg);
+}
+
+.page-art .brush-stroke--quote {
+  width: min(7rem, 38%);
+  margin: 0.85rem 0 0;
+  color: var(--brush-ink);
+  opacity: 0.55;
+  transform: rotate(-1.2deg);
+}
+
+/* Painted mark under every body section heading and the map heading. */
+.page-art .article-body h2,
+.page-art .venue-map h2 {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 0.2rem;
+  margin-inline: 0;
+  text-align: left;
+}
+
+.page-art .article-body h2::after,
+.page-art .venue-map h2::after {
+  content: "";
+  display: block;
+  width: 11.5rem;
+  max-width: 100%;
+  height: 0.8rem;
+  margin: 0.35rem 0 0.95rem 0;
+  background-image: var(--brush-mark);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% 100%;
+  transform: none;
+  pointer-events: none;
+}
+
+.page-art .venue-map h2::after {
+  width: 10rem;
+  filter: hue-rotate(18deg) saturate(1.1);
+}
+
+.page-art .pull-quote.has-brush {
+  margin-bottom: 1.5rem;
+}
+
+.page-art .pull-quote.has-brush .brush-stroke--quote {
+  margin-left: 0.15rem;
+}
+
+/* Closing quote after Marbella section */
+.page-art .article-body .closing-quote {
+  margin: 2.75rem auto 2.5rem;
+  padding: 0;
+  border: 0;
+  max-width: 36rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 0;
+}
+
+.page-art .article-body .closing-quote p {
+  margin: 0;
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  font-size: clamp(1.35rem, 3.4vw, 1.75rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-wrap: balance;
+}
+
+.page-art .brush-stroke--closing {
+  width: min(11rem, 55%);
+  margin: 1rem auto 0;
+  color: var(--brush-red);
+  opacity: 0.78;
+  transform: rotate(-0.8deg);
+}
+
+/* Portrait: full frame so Malin and the artwork stay visible. */
+.page-art .article-photo-portrait {
+  max-width: min(30rem, 100%);
+}
+
+.page-art .article-photo-portrait img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* Carousel captions: artist first, supporting credit underneath. */
+.page-art .carousel-slide figcaption {
+  display: grid;
+  gap: 0.2rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.page-art .carousel-artist {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.page-art .carousel-work {
+  display: block;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text);
+}
+
+.page-art .carousel-meta {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* More air between poll, video and map — poll stays a standalone block. */
+.page-art .poll {
+  margin-top: 3.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0.25rem;
+}
+
+.page-art .poll + .article-video {
+  margin-top: 4rem;
+}
+
+.page-art .article-video + .venue-map {
+  margin-top: 5rem;
+}
+
+/* Poll accents match the brush marks on this page only. */
+.page-art .poll-option:hover {
+  border-color: var(--brush-red);
+}
+
+.page-art .poll-option:focus-visible {
+  outline: 2px solid var(--brush-red);
+  outline-offset: 3px;
+}
+
+.page-art .poll-option[aria-pressed="true"] {
+  border-color: var(--brush-red);
+  background: var(--beige);
+}
+
+.page-art .poll .poll-thanks {
+  color: var(--brush-red);
+}
+
+@media (max-width: 700px) {
+  .page-art .article-photo-portrait {
+    max-width: min(22rem, 100%);
+  }
+
+  .page-art .poll + .article-video {
+    margin-top: 3.25rem;
+  }
+
+  .page-art .article-video + .venue-map {
+    margin-top: 4rem;
+  }
+
+  .page-art .brush-stroke--hero {
+    width: min(17rem, 92%);
+    margin-bottom: 0.35rem;
+  }
+
+  .page-art .brush-stroke--section {
+    width: min(8rem, 52%);
+  }
+
+  .page-art .brush-stroke--quote {
+    width: min(6rem, 42%);
+  }
+
+  .page-art .article-body .closing-quote {
+    margin: 2.25rem auto 2rem;
+    max-width: 100%;
+  }
+
+  .page-art .article-body .closing-quote p {
+    font-size: clamp(1.2rem, 5.2vw, 1.45rem);
+  }
+
+  .page-art .brush-stroke--closing {
+    width: min(9rem, 58%);
+  }
+
+  .page-art .article-body h2::after,
+  .page-art .venue-map h2::after {
+    width: 11.5rem;
+    max-width: 85%;
+    height: 0.75rem;
+    margin-left: 0;
+    margin-right: auto;
+    background-position: left center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-art .brush-stroke,
+  .page-art .article-body h2::after,
+  .page-art .venue-map h2::after {
+    transform: none;
+  }
+}
