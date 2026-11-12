@@ -5,6 +5,7 @@
    Utklipp: fyll clips[nokkel].src for å vise et skann i lightboxen. */
 const KINOSJEFEN_MEDIA = {
   hero: { type: "image", src: "../images/kjeldsen-slutter.jpg", alt: "Olav Kjeldsen sitter i kinosalen. Hentet fra Fredriksstad Blad." },
+  grotte: { type: "image", src: "../images/olav-kjeldsen-1995.jpg", alt: "Olav Kjeldsen foran Blå Grotte i Fredrikstad, med skiltet og filmplakater bak seg." },
   havana: { type: "image", src: "../images/kinoutstyr-cuba.jpg", alt: "Kinosjef Olav Kjeldsen (f.v) og kultursjef i Fredrikstad Egil Syversen sammen med president i det cubanske filminstituttet, Omar Gonzalez, på Cuba. Foto: Trond Thorvaldsen, 06.07.2003. Hentet fra Fredrikstad blad." },
   audio: {
     kredo: { src: "../audio/tilgivelse-enn-tillatelse.m4a" },
