@@ -259,6 +259,38 @@ button { font: inherit; cursor: pointer; }
 .option .n { font-family: var(--mono); color: var(--lamp); }
 .option[aria-pressed="true"] { border-color: var(--lamp); background: rgba(242,179,91,.08); }
 .reveal { border-top: 1px solid var(--line); padding-top: 1rem; }
+.fox-exits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: .4rem .2rem;
+}
+.fox-exit {
+  display: grid;
+  gap: .45rem;
+  align-content: start;
+}
+.fox-label {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--line);
+}
+.fox-exit.is-open .fox-label {
+  color: var(--lamp);
+  border-bottom-color: var(--lamp);
+}
+.fox-exit p {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--fg);
+}
+@media (max-width: 640px) {
+  .fox-exits { grid-template-columns: 1fr; }
+}
 
 /* screen masking */
 .screen-demo { background: var(--bg-2); padding: 1.25rem; display: grid; gap: 1rem; }

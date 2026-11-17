@@ -171,11 +171,26 @@
     2: 'Akkurat som klubben. Den blånektet det strengeste forslaget og gikk for mellomforslaget.',
     3: 'Klubben blånektet dette forslaget. Det var aldri ment å bli valgt.'
   };
+  const foxMap = `
+    <div class="fox-exits" aria-label="Revejaktteorien forklart">
+      <div class="fox-exit">
+        <span class="fox-label">Den tettede utgangen</span>
+        <p>Forslag 1: Alt som før. Det visste alle at ikke gikk.</p>
+      </div>
+      <div class="fox-exit">
+        <span class="fox-label">Bålet</span>
+        <p>Forslag 3: Enda strengere. Det skulle skremme.</p>
+      </div>
+      <div class="fox-exit is-open">
+        <span class="fox-label">Den ledige utgangen</span>
+        <p>Forslag 2: Det kinosjefen ville ha hele tiden.</p>
+      </div>
+    </div>`;
   document.querySelectorAll('.option').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('.option').forEach(o => o.setAttribute('aria-pressed', o === b));
     const picked = b.dataset.opt === '2';
     reveal.innerHTML = '<div class="prose"><p>' + replies[b.dataset.opt] + '</p>' + (picked
-      ? '<p class="quote">– Det var akkurat det jeg ville ha. Jeg er gammel, men jeg er ikke dum.</p><p>Som reven som flykter fra bålet og ut den eneste ledige utgangen, valgte klubben det forslaget kinosjefen hadde siktet mot hele tiden.</p>'
+      ? '<p class="quote">– Det var akkurat det jeg ville ha. Jeg er gammel, men jeg er ikke dum.</p>' + foxMap + '<p>Som reven som flykter fra bålet, gikk klubben ut den eneste ledige utgangen. Der ventet kinosjefen.</p>'
       : '<p>Prøv et annet forslag for å se hvilket Kjeldsen egentlig ville ha.</p>') + '</div>';
   }));
 
