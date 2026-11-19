@@ -40,7 +40,7 @@
   function onScroll() {
     const max = document.documentElement.scrollHeight - innerHeight;
     const t = max > 0 ? Math.min(1, scrollY / max) : 0;
-    cv.style.opacity = (0.14 * (1 - Math.min(1, t * 1.7))).toFixed(3);
+    cv.style.opacity = (0.16 * (1 - Math.min(1, t * 1.7))).toFixed(3);
   }
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();

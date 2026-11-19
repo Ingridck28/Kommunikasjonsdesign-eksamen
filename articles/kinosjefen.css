@@ -32,7 +32,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   pointer-events: none;
   z-index: 5;
   mix-blend-mode: soft-light;
-  opacity: .14;
+  opacity: .16;
   image-rendering: pixelated;
 }
 .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
