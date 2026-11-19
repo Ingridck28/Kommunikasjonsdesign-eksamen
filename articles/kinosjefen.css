@@ -32,10 +32,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   pointer-events: none;
   z-index: 5;
   mix-blend-mode: soft-light;
-  opacity: .20;
+  opacity: .22;
   image-rendering: pixelated;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 18%, rgba(0,0,0,.55) 42%, rgba(0,0,0,.2) 68%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 18%, rgba(0,0,0,.55) 42%, rgba(0,0,0,.2) 68%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 24%, rgba(0,0,0,.6) 42%, rgba(0,0,0,.25) 65%, rgba(0,0,0,.08) 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 24%, rgba(0,0,0,.6) 42%, rgba(0,0,0,.25) 65%, rgba(0,0,0,.08) 85%, transparent 100%);
 }
 .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .col { width: 100%; max-width: 40rem; min-width: 0; margin-inline: auto; justify-self: center; }
