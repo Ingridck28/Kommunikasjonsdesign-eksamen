@@ -7,19 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="kinosjefen.css?v=16">
+<link rel="stylesheet" href="kinosjefen.css?v=17">
 </head>
 <body>
 
-<canvas id="grain" aria-hidden="true"></canvas>
-
 <main>
-  <!-- Åpningen med filmkorn -->
+  <!-- Åpningen: filmkorn kun bak hovedoverskriften -->
   <header class="wrap" id="apning">
     <div class="col hero">
       <p class="back-link"><a href="../index.html#stories"><span aria-hidden="true">← </span>Tilbake</a></p>
       <span class="reel">Olav Kjeldsen · fra 1994 - 2008</span>
-      <h1>Kinosjefen som heller ba om tilgivelse</h1>
+      <div class="title-field">
+        <canvas id="grain" aria-hidden="true"></canvas>
+        <h1>Kinosjefen som heller ba om tilgivelse</h1>
+      </div>
       <p class="ingress">Han kunne nesten ingenting om film da han ble kinosjef i Fredrikstad i 1994. Likevel nesten tredoblet Olav Kjeldsen besøket, slapp cowboyer ridende på hest inn i kinosalen og sendte fem containere med kinoutstyr til Cuba.</p>
       <figure class="hero-photo">
         <div class="frame" data-media="hero">[Bilde/video: Olav Kjeldsen i dag, gjerne i kinosalen]</div>
@@ -290,8 +291,8 @@
 </div>
 <div class="toast" id="toast" hidden></div>
 
-<script src="../data/besokstall.js?v=16"></script>
-<script src="../data/kinosjefen-media.js?v=16"></script>
-<script src="kinosjefen.js?v=16"></script>
+<script src="../data/besokstall.js?v=17"></script>
+<script src="../data/kinosjefen-media.js?v=17"></script>
+<script src="kinosjefen.js?v=17"></script>
 </body>
 </html>

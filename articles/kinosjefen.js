@@ -37,14 +37,6 @@
   noise();
   if (!reduce) setInterval(noise, 90);
 
-  function onScroll() {
-    const max = document.documentElement.scrollHeight - innerHeight;
-    const t = max > 0 ? Math.min(1, scrollY / max) : 0;
-    cv.style.opacity = (0.16 * (1 - Math.min(1, t * 1.6))).toFixed(3);
-  }
-  addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
   /* toast for audio placeholders */
   const toast = document.getElementById('toast');
   let toastTimer;
