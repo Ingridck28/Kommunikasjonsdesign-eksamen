@@ -7,34 +7,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="kinosjefen.css?v=19">
+<link rel="stylesheet" href="kinosjefen.css?v=22">
 </head>
 <body>
 
+<canvas id="grain" aria-hidden="true"></canvas>
+
 <main>
-  <!-- Åpningen: filmkorn i full bredde over toppen -->
-  <header id="apning">
-    <div class="hero-masthead">
-      <canvas id="grain" aria-hidden="true"></canvas>
-      <div class="wrap">
-        <div class="col hero-masthead-inner">
-          <p class="back-link"><a href="../index.html#stories"><span aria-hidden="true">← </span>Tilbake</a></p>
-          <span class="reel">Olav Kjeldsen · fra 1994 - 2008</span>
-          <h1>Kinosjefen som heller ba om tilgivelse</h1>
-        </div>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="col hero hero-rest">
-        <p class="ingress">Han kunne nesten ingenting om film da han ble kinosjef i Fredrikstad i 1994. Likevel nesten tredoblet Olav Kjeldsen besøket, slapp cowboyer ridende på hest inn i kinosalen og sendte fem containere med kinoutstyr til Cuba.</p>
-        <figure class="hero-photo">
-          <div class="frame" data-media="hero">[Bilde/video: Olav Kjeldsen i dag, gjerne i kinosalen]</div>
-          <p class="byline">Arkivfoto: Are Bye, hentet fra Fredrikstad blad 23.03.07</p>
-        </figure>
-        <div class="hero-quote">
-          <blockquote>«Det er lettere å få tilgivelse enn tillatelse.»</blockquote>
-          <button class="btn listen" data-audio="kredo">Hør Olav si det</button>
-        </div>
+  <!-- Åpningen med dempet filmkorn -->
+  <header class="wrap" id="apning">
+    <div class="col hero">
+      <p class="back-link"><a href="../index.html#stories"><span aria-hidden="true">← </span>Tilbake</a></p>
+      <span class="reel">Olav Kjeldsen · fra 1994 - 2008</span>
+      <h1>Kinosjefen som heller ba om tilgivelse</h1>
+      <p class="ingress">Han kunne nesten ingenting om film da han ble kinosjef i Fredrikstad i 1994. Likevel nesten tredoblet Olav Kjeldsen besøket, slapp cowboyer ridende på hest inn i kinosalen og sendte fem containere med kinoutstyr til Cuba.</p>
+      <figure class="hero-photo">
+        <div class="frame" data-media="hero">[Bilde/video: Olav Kjeldsen i dag, gjerne i kinosalen]</div>
+        <p class="byline">Arkivfoto: Are Bye, hentet fra Fredrikstad blad 23.03.07</p>
+      </figure>
+      <div class="hero-quote">
+        <blockquote>«Det er lettere å få tilgivelse enn tillatelse.»</blockquote>
+        <button class="btn listen" data-audio="kredo">Hør Olav si det</button>
       </div>
     </div>
   </header>
@@ -297,8 +290,8 @@
 </div>
 <div class="toast" id="toast" hidden></div>
 
-<script src="../data/besokstall.js?v=19"></script>
-<script src="../data/kinosjefen-media.js?v=19"></script>
-<script src="kinosjefen.js?v=19"></script>
+<script src="../data/besokstall.js?v=22"></script>
+<script src="../data/kinosjefen-media.js?v=22"></script>
+<script src="kinosjefen.js?v=22"></script>
 </body>
 </html>
