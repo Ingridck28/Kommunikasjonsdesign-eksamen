@@ -42,30 +42,57 @@
   let toastTimer;
   let currentSound = null;
   let currentKey = null;
+  let currentBtn = null;
   function say(msg) {
     toast.textContent = msg; toast.hidden = false;
     clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.hidden = true, 2600);
   }
-  document.querySelectorAll('[data-audio]').forEach(b =>
+  function setListenState(btn, playing) {
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    btn.classList.toggle('is-playing', playing);
+    if (!btn.dataset.label) btn.dataset.label = btn.textContent.trim();
+    btn.textContent = playing ? 'Pause' : btn.dataset.label;
+  }
+  function stopListen() {
+    if (currentSound) {
+      currentSound.pause();
+      currentSound.currentTime = 0;
+    }
+    setListenState(currentBtn, false);
+    currentSound = null;
+    currentKey = null;
+    currentBtn = null;
+  }
+  document.querySelectorAll('[data-audio]').forEach(b => {
+    b.setAttribute('aria-pressed', 'false');
+    b.dataset.label = b.textContent.trim();
     b.addEventListener('click', () => {
       const key = b.dataset.audio;
       const clip = media.audio && media.audio[key];
       if (clip && clip.src) {
         if (currentSound && currentKey === key && !currentSound.paused) {
           currentSound.pause();
-          currentSound.currentTime = 0;
+          setListenState(b, false);
           return;
         }
-        if (currentSound) {
-          currentSound.pause();
+        if (currentSound && currentKey === key && currentSound.paused) {
+          currentSound.play().catch(() => say('Her legges lydklippet fra intervjuet inn.'));
+          setListenState(b, true);
+          return;
         }
+        stopListen();
         currentKey = key;
+        currentBtn = b;
         currentSound = new Audio(clip.src);
-        currentSound.play().catch(() => say('Her legges lydklippet fra intervjuet inn.'));
+        currentSound.addEventListener('ended', () => setListenState(b, false));
+        currentSound.play().then(() => setListenState(b, true))
+          .catch(() => say('Her legges lydklippet fra intervjuet inn.'));
         return;
       }
       say('Her legges lydklippet fra intervjuet inn.');
-    }));
+    });
+  });
 
   /* clippings */
   const clips = {

@@ -69,6 +69,13 @@ button { font: inherit; cursor: pointer; }
 .btn[aria-pressed="true"] { background: var(--lamp); color: var(--bg); border-color: var(--lamp); }
 .listen { display: inline-flex; align-items: center; gap: .5rem; }
 .listen::before { content: ""; width: 0; height: 0; border-left: 8px solid currentColor; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.listen.is-playing::before,
+.listen[aria-pressed="true"]::before {
+  width: 8px;
+  height: 10px;
+  border: 0;
+  background: linear-gradient(to right, currentColor 0 3px, transparent 3px 5px, currentColor 5px 8px);
+}
 
 /* film-frame placeholder for photos */
 .frame { position: relative; z-index: 6; background: var(--bg-2); border-block: 14px solid #000; aspect-ratio: 16 / 9; max-width: 100%; display: grid; place-items: center; text-align: center; padding: 1rem; color: var(--muted); font-family: var(--mono); font-size: .8rem; }
